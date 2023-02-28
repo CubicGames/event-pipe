@@ -19,7 +19,8 @@
 - more subtle filter and critia condition for subscription
 - reduce costs instead of increasing fees;
 - graphQL/API query
-- local state rollback for forked chain
+- local state rollback when  chain is forked
+- event: confirmed/unconfirmed
 
 ## Non-functional Requirement
 
