@@ -9,7 +9,7 @@
 - database persistence: optional
 - MQ broadcast
 
-## NonFunctional Requirement
+## Non-functional Requirement
 
 - Highly Available 
 - Resilient
