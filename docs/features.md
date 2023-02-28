@@ -7,7 +7,7 @@
 - database persistence: optional
 - MQ broadcast
 
-# High-Level Design Solution for Blockchain Event Subscription
+# High-Level Design
 
 ## Introduction
 
