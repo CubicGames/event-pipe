@@ -3,14 +3,22 @@
 ## Functional Requirement
 
 - chain types: tendermint,...
-- event types: block, transaction, contract/module
+- event types: contract/module
+  * related to NFT
+  * block, transaction data
 - dynamic configuration
 - subscription changes through API
 - MQ broadcast
 - logging
 - monitor metrics
 - database persistence: optional
-
+- common event data structure, event encoding/decoding RLP/BCS
+- contract and its metadata
+- listener/worker pattern
+- same data structure and encoding for worker output
+- more subtle filter and critia condition for subscription
+- reduce costs instead of increasing fees;
+- graphQL/API query
 
 ## Non-functional Requirement
 
