@@ -26,6 +26,7 @@
 
 - Highly Available 
 - Resilient
+- Fork Tolerance(fork event)
 
 # High-Level Design
 
