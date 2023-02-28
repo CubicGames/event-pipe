@@ -2,12 +2,15 @@
 
 ## Functional Requirement
 
-- chain types: tendermint
+- chain types: tendermint,...
 - event types: block, transaction, contract/module
 - dynamic configuration
 - subscription changes through API
-- database persistence: optional
 - MQ broadcast
+- logging
+- monitor metrics
+- database persistence: optional
+
 
 ## Non-functional Requirement
 
