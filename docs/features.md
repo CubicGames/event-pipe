@@ -19,6 +19,7 @@
 - more subtle filter and critia condition for subscription
 - reduce costs instead of increasing fees;
 - graphQL/API query
+- local state rollback for forked chain
 
 ## Non-functional Requirement
 
