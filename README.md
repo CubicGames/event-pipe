@@ -1,2 +1,2 @@
 # event-pipe
-Middleware between Blockchan network and Backend applications
+Event middleware between Blockchan network and Backend applications
