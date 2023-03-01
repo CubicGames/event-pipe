@@ -5,7 +5,7 @@
 ```mermaid
 
 classDiagram
-
+    diretion TB
     class WebSocketService {
         WebSocketClient socketClient
         onWebSocketClose(): void
