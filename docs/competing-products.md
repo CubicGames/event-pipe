@@ -62,8 +62,56 @@ classDiagram
     class AsyncTaskService {
         execute(String executorName, Runnable task): void
         submit(String executorName, Callable<T> task): Future<T>
-    }  
-  
-    
+    }
+
+    class EventStoreService {
+        << interface >>
+        getLatestBlock(String nodeName): Optional<LatestBlock>
+        getLatestContractEvent(String eventSignature, String contractAddress): Optional<ContractEventDetails>
+    }
+
+    class TransactionMonitoringService {
+        << interface >>
+        registerTransactionsToMonitor(TransactionMonitoringSpec spec, boolean broadcast): void
+        stopMonitoringTransactions(String id, boolean broadcast): void
+    }
+
+    class EventRetriever {
+        << interface >>
+        retrieveEvents(ContractEventFilter eventFilter,
+                        BigInteger startBlock,
+                        BigInteger endBlock,
+                        Consumer<List<ContractEventDetails>> eventConsumer): void
+    }
+
+    class ContractEventFilterRepository {
+        CrudRepository crudRepository
+    }
+
+    class EventeumEventBroadcaster {
+        << interface >>
+        broadcastEventFilterAdded(ContractEventFilter filter): void
+        broadcastEventFilterRemoved(ContractEventFilter filter): void
+    }
+
+    class BlockchainEventBroadcaster {
+        << interface >>
+        broadcastNewBlock(BlockDetails block): void
+        broadcastContractEvent(ContractEventDetails eventDetails): void
+        broadcastTransaction(TransactionDetails transactionDetails): void
+    }
+
+    class SaveableEventStore {
+        << interface >>
+        save(ContractEventDetails contractEventDetails): void
+        save(LatestBlock latestBlock): void
+    }
+
+    class NodeServices {
+        String nodeName
+        Web3j web3j
+        BlockchainService blockchainService
+        BlockSubscriptionStrategy blockSubscriptionStrategy
+    }
   
 ```
